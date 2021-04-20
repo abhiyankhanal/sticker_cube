@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sticker_cube/views/checkout.dart';
 
-import 'views/home.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -21,12 +19,12 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: "/",
-          page: () => Home(),
-        ),
-        GetPage(
-          name: "/checkout",
           page: () => CheckOut(),
         ),
+        // GetPage(
+        //   name: "/checkout",
+        //   page: () => CheckOut(),
+        // ),
       ],
     );
   }
