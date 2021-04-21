@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sticker_cube/constants/color.dart';
+import 'package:sticker_cube/views/Home/home.dart';
 import 'package:sticker_cube/views/checkout.dart';
-import 'views/home.dart';
+
 import 'views/profile.dart';
 import 'views/search.dart';
 
@@ -12,19 +13,20 @@ class ButtonNavigationBar extends StatefulWidget {
 }
 
 class _ButtonNavigationBarState extends State<ButtonNavigationBar> {
-  int _selectedIndex = 2;
+  int _selectedIndex = 0;
   List pages = <Widget>[Home(), Search(), CheckOut(), Profile()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[_selectedIndex],
       bottomNavigationBar: SizedBox(
-        height: 50.0,
+        height: 55.0,
         child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
+          selectedItemColor: secCol,
+          unselectedItemColor: mainCol,
           backgroundColor: white,
+          type: BottomNavigationBarType.fixed,
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.red,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(
@@ -32,7 +34,6 @@ class _ButtonNavigationBarState extends State<ButtonNavigationBar> {
                 size: 20.0,
               ),
               label: '',
-              backgroundColor: Colors.red,
             ),
             BottomNavigationBarItem(
               icon: Icon(
@@ -40,7 +41,6 @@ class _ButtonNavigationBarState extends State<ButtonNavigationBar> {
                 size: 20.0,
               ),
               label: '',
-              backgroundColor: Colors.green,
             ),
             BottomNavigationBarItem(
               icon: Icon(
@@ -48,7 +48,6 @@ class _ButtonNavigationBarState extends State<ButtonNavigationBar> {
                 size: 20.0,
               ),
               label: ' ',
-              backgroundColor: Colors.pink,
             ),
             BottomNavigationBarItem(
               icon: Icon(
@@ -56,7 +55,6 @@ class _ButtonNavigationBarState extends State<ButtonNavigationBar> {
                 size: 20.0,
               ),
               label: '',
-              backgroundColor: Colors.green,
             ),
           ],
           onTap: (index) {

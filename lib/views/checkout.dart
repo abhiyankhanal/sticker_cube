@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sticker_cube/constants/color.dart';
-import 'package:sticker_cube/bottomNavigationBar.dart';
 
 class CheckOut extends StatelessWidget {
   @override
