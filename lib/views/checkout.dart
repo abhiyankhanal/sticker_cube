@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sticker_cube/constants/color.dart';
+import 'package:sticker_cube/bottomNavigationBar.dart';
 
 class CheckOut extends StatelessWidget {
   @override
@@ -39,7 +40,7 @@ class CheckOut extends StatelessWidget {
                   ),
                   Container(
                     height: 80.0,
-                    width: 420.0,
+                    width: width - 50,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10.0),
@@ -186,6 +187,26 @@ class CheckOut extends StatelessWidget {
                     price: 'Rs. 170',
                     size: 18.0,
                   ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  GestureDetector(
+                    onTap: null,
+                    child: Container(
+                      alignment: Alignment.center,
+                      color: mainCol,
+                      height: 50.0,
+                      width: width,
+                      child: Text(
+                        'Proceed to Checkout',
+                        style: TextStyle(
+                          color: white,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
@@ -226,18 +247,30 @@ class BillingPrice extends StatelessWidget {
   }
 }
 
-class CartItems extends StatelessWidget {
+class CartItems extends StatefulWidget {
   final String images;
   final String stickerTitle, size, price;
 
   CartItems({this.images, this.stickerTitle, this.size, this.price});
 
   @override
+  _CartItemsState createState() => _CartItemsState();
+}
+
+class _CartItemsState extends State<CartItems> {
+  int quantity;
+
+  @override
+  void initState() {
+    quantity = 1;
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Image.network(
-          images,
+          widget.images,
           height: 100.0,
           width: 100.0,
         ),
@@ -250,13 +283,13 @@ class CartItems extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  stickerTitle,
+                  widget.stickerTitle,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
-                  size,
+                  widget.size,
                 )
               ],
             ),
@@ -265,15 +298,46 @@ class CartItems extends StatelessWidget {
             ),
             Row(
               children: [
-                Text('-'),
-                SizedBox(
-                  width: 60.0,
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      quantity--;
+                      print(quantity);
+                    });
+                  },
+                  child: Text(
+                    '-',
+                    style: TextStyle(
+                      fontSize: 30.0,
+                    ),
+                  ),
                 ),
-                Text('1'),
                 SizedBox(
-                  width: 60.0,
+                  width: 30.0,
                 ),
-                Text('+'),
+                Text(
+                  quantity.toString(),
+                  style: TextStyle(
+                    fontSize: 30.0,
+                  ),
+                ),
+                SizedBox(
+                  width: 30.0,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      quantity++;
+                      print(quantity);
+                    });
+                  },
+                  child: Text(
+                    '+',
+                    style: TextStyle(
+                      fontSize: 30.0,
+                    ),
+                  ),
+                ),
               ],
             ),
           ],
@@ -290,7 +354,7 @@ class CartItems extends StatelessWidget {
               height: 35.0,
             ),
             Text(
-              price,
+              widget.price,
               style: TextStyle(
                 fontSize: 14.0,
                 fontWeight: FontWeight.bold,

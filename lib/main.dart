@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sticker_cube/views/checkout.dart';
 
+import 'bottomNavigationBar.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: "/",
-          page: () => CheckOut(),
+          page: () => ButtonNavigationBar(),
         ),
         // GetPage(
         //   name: "/checkout",
