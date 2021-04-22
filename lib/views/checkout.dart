@@ -53,7 +53,7 @@ class CheckOut extends StatelessWidget {
                       ],
                     ),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
                           decoration: BoxDecoration(
@@ -73,17 +73,15 @@ class CheckOut extends StatelessWidget {
                         SizedBox(
                           width: 10.0,
                         ),
-                        Container(
-                          height: height * 0.18,
-                          child: Text(
-                            '''Add 2 more small stickers to this order''',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 2,
+                        Text(
+                          '''Add 2 more small stickers to this \n order & get 20% off''',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                            color: mainCol,
                           ),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 2,
                         ),
                         SizedBox(
                           height: 20.0,

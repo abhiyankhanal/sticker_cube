@@ -12,7 +12,13 @@ class GridContainer extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Container(
-      color: white,
+      decoration: BoxDecoration(
+        color: white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -27,11 +33,9 @@ class GridContainer extends StatelessWidget {
               image: NetworkImage(imgUrl),
             ),
           ),
-          SizedBox(
-            height: 2.0,
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 5.0),
@@ -64,13 +68,12 @@ class GridContainer extends StatelessWidget {
                 width: 20,
               ),
               Container(
+                height: height * 0.062,
+                width: width * 0.14,
                 color: secCol,
-                child: Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Icon(
-                    Icons.add,
-                    color: white,
-                  ),
+                child: Icon(
+                  Icons.add,
+                  color: white,
                 ),
               )
             ],

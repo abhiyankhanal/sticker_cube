@@ -24,13 +24,10 @@ class Home extends StatelessWidget {
         child: Container(
           color: mainCol.withOpacity(0.05),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                SizedBox(
-                  height: 15,
-                ),
                 CaroSlide(),
                 SizedBox(
                   height: 15,
@@ -120,50 +117,52 @@ class Home extends StatelessWidget {
                           height: 15.0,
                         ),
                         SizedBox(
-                            height: height * 0.6,
-                            child: GridView.count(
-                              crossAxisCount: 2,
-                              crossAxisSpacing: 10,
-                              mainAxisSpacing: 10,
-                              children: <Widget>[
-                                GridContainer(
-                                  name: "Avenger sticker",
-                                  category: "Laptop Sticker",
-                                  imgUrl:
-                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
-                                ),
-                                GridContainer(
-                                  name: "Avenger sticker",
-                                  category: "Laptop Sticker",
-                                  imgUrl:
-                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
-                                ),
-                                GridContainer(
-                                  name: "Avenger sticker",
-                                  category: "Laptop Sticker",
-                                  imgUrl:
-                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
-                                ),
-                                GridContainer(
-                                  name: "Avenger sticker",
-                                  category: "Laptop Sticker",
-                                  imgUrl:
-                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
-                                ),
-                                GridContainer(
-                                  name: "Avenger sticker",
-                                  category: "Laptop Sticker",
-                                  imgUrl:
-                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
-                                ),
-                                GridContainer(
-                                  name: "Avenger sticker",
-                                  category: "Laptop Sticker",
-                                  imgUrl:
-                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
-                                ),
-                              ],
-                            ))
+                          height: height * 0.4,
+                          child: GridView.count(
+                            childAspectRatio: (height * 0.2) / (width * 0.45),
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 10,
+                            mainAxisSpacing: 10,
+                            children: <Widget>[
+                              GridContainer(
+                                name: "Avenger sticker",
+                                category: "Laptop Sticker",
+                                imgUrl:
+                                    "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
+                              ),
+                              GridContainer(
+                                name: "Avenger sticker",
+                                category: "Laptop Sticker",
+                                imgUrl:
+                                    "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
+                              ),
+                              GridContainer(
+                                name: "Avenger sticker",
+                                category: "Laptop Sticker",
+                                imgUrl:
+                                    "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
+                              ),
+                              GridContainer(
+                                name: "Avenger sticker",
+                                category: "Laptop Sticker",
+                                imgUrl:
+                                    "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
+                              ),
+                              GridContainer(
+                                name: "Avenger sticker",
+                                category: "Laptop Sticker",
+                                imgUrl:
+                                    "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
+                              ),
+                              GridContainer(
+                                name: "Avenger sticker",
+                                category: "Laptop Sticker",
+                                imgUrl:
+                                    "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
