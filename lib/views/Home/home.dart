@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sticker_cube/constants/color.dart';
 import 'package:sticker_cube/views/Home/widgets/caroSlider.dart';
 import 'package:sticker_cube/views/Home/widgets/category.dart';
+import 'package:sticker_cube/views/Home/widgets/gridContainer.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -125,40 +126,41 @@ class Home extends StatelessWidget {
                               crossAxisSpacing: 10,
                               mainAxisSpacing: 10,
                               children: <Widget>[
-                                Container(
-                                  height: 20,
-                                  width: 20,
-                                  color: mainCol,
+                                GridContainer(
+                                  name: "Avenger sticker",
+                                  category: "Laptop Sticker",
+                                  imgUrl:
+                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
                                 ),
-                                Container(
-                                  height: 20,
-                                  width: 20,
-                                  color: mainCol,
+                                GridContainer(
+                                  name: "Avenger sticker",
+                                  category: "Laptop Sticker",
+                                  imgUrl:
+                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
                                 ),
-                                Container(
-                                  height: 20,
-                                  width: 20,
-                                  color: mainCol,
+                                GridContainer(
+                                  name: "Avenger sticker",
+                                  category: "Laptop Sticker",
+                                  imgUrl:
+                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
                                 ),
-                                Container(
-                                  height: 20,
-                                  width: 20,
-                                  color: mainCol,
+                                GridContainer(
+                                  name: "Avenger sticker",
+                                  category: "Laptop Sticker",
+                                  imgUrl:
+                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
                                 ),
-                                Container(
-                                  height: 20,
-                                  width: 20,
-                                  color: mainCol,
+                                GridContainer(
+                                  name: "Avenger sticker",
+                                  category: "Laptop Sticker",
+                                  imgUrl:
+                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
                                 ),
-                                Container(
-                                  height: 20,
-                                  width: 20,
-                                  color: mainCol,
-                                ),
-                                Container(
-                                  height: 20,
-                                  width: 20,
-                                  color: mainCol,
+                                GridContainer(
+                                  name: "Avenger sticker",
+                                  category: "Laptop Sticker",
+                                  imgUrl:
+                                      "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
                                 ),
                               ],
                             ))
