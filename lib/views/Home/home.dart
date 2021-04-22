@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
         backgroundColor: mainCol,
         title: Image(
           width: width * 0.4,
-          image: AssetImage("assets/full.png"),
+          image: AssetImage("assets/images/full.png"),
         ),
         elevation: 0,
       ),

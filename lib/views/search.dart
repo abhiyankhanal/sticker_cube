@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_pro/carousel_pro.dart';
+
 import 'package:sticker_cube/constants/color.dart';
+import 'package:sticker_cube/views/Home/widgets/caroSlider.dart';
 
 class Search extends StatefulWidget {
   @override
@@ -52,7 +53,7 @@ class _SearchState extends State<Search> {
                       CircleAvatar(
                         radius: 30.0,
                         child: Image.network(
-                            'https://lh3.googleusercontent.com/proxy/oD7PQWBshyX9CGrWtA3wlg3kO4tOrVt5v4vcD-keT6IeO-s79gEfh5m4NVPpTF3WlRFqKdiJRC0y68kFvrx6taagUrrx4zKzKthEOrU292Ahjx7faF7lH62G2z2J3RqN9elRLUxd1PSUrV4gbmwxvU8'),
+                            'https://th.bing.com/th/id/OIP.M9AsZ7Sm6Qq-LXpY92Tt2AHaEK?pid=ImgDet&rs=1'),
                       ),
                       SizedBox(
                         width: 10.0,
@@ -87,16 +88,7 @@ class _SearchState extends State<Search> {
                   SizedBox(
                     height: 300.0,
                     width: MediaQuery.of(context).size.width,
-                    child: Carousel(
-                      dotSize: 5.0,
-                      dotBgColor: Colors.transparent,
-                      dotPosition: DotPosition.bottomLeft,
-                      images: [
-                        AssetImage('images/sticker1.jpg'),
-                        AssetImage('images/sticker2.jpg'),
-                        AssetImage('images/sticker3.jpg'),
-                      ],
-                    ),
+                    child: CaroSlide(),
                   ),
                   SizedBox(
                     height: 20.0,
