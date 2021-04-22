@@ -38,8 +38,8 @@ class CheckOut extends StatelessWidget {
                     height: 10.0,
                   ),
                   Container(
-                    height: 80.0,
-                    width: width - 50,
+                    height: height * 0.13,
+                    width: width,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10.0),
@@ -53,6 +53,7 @@ class CheckOut extends StatelessWidget {
                       ],
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
                           decoration: BoxDecoration(
@@ -72,25 +73,17 @@ class CheckOut extends StatelessWidget {
                         SizedBox(
                           width: 10.0,
                         ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Add 2 more small stickers to this order',
-                              style: TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
-                              ),
+                        Container(
+                          height: height * 0.18,
+                          child: Text(
+                            '''Add 2 more small stickers to this order''',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
                             ),
-                            Text(
-                              'and we\'ll discount all of them by 25%',
-                              style: TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                          ),
                         ),
                         SizedBox(
                           height: 20.0,
@@ -205,7 +198,7 @@ class CheckOut extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
